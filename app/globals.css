@@ -1,0 +1,56 @@
+:root {
+  --bg: #111;
+  --fg: #eee;
+  --muted: #999;
+  --accent: #e50914;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.topbar { padding: 16px 4vw; }
+.logo { color: var(--accent); font-size: 1.6rem; font-weight: 800; }
+
+.hero { padding: 12vh 4vw; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 12px; }
+.hero p { max-width: 520px; color: #ccc; }
+.play-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: #fff;
+  color: #000;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.row { padding: 0 4vw 24px; }
+.row h2 { font-size: 1.2rem; }
+.rail { display: flex; gap: 8px; overflow-x: auto; }
+
+.card {
+  flex: 0 0 240px;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.15s;
+}
+.card:hover { transform: scale(1.05); }
+.card-title { font-weight: 700; }
+.card-meta { font-size: 0.8rem; color: #ddd; }
+
+.watch { max-width: 1100px; margin: 0 auto; padding: 0 4vw 48px; }
+.player { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.meta, .license { color: var(--muted); }
+.license { font-size: 0.8rem; }
